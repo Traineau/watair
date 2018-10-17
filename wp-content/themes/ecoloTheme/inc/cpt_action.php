@@ -1,25 +1,30 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: thoma
+ * Date: 17/10/2018
+ * Time: 16:20
+ */
 
-add_action( 'init', 'ajout_custom_type_membre' );
+add_action( 'init', 'ajout_custom_type_action' );
 
-function ajout_custom_type_membre()
-{
+function ajout_custom_type_action(){
 
-    $post_type = "membre";
+    $post_type = "action";
     $labels = array(
-        'name' => 'Membres',
-        'singular_name' => 'Membres',
-        'all_items' => 'Tous les membres',
-        'add_new' => 'Ajouter un membre',
-        'add_new_item' => 'Ajouter un membre',
-        'edit_item' => "Editer un membre",
-        'new_item' => 'Nouveau membre',
-        'view_item' => "Voir un membre",
-        'search_items' => 'Chercher un membre',
+        'name' => 'Action',
+        'singular_name' => 'Action',
+        'all_items' => 'Toutes les actions',
+        'add_new' => 'Ajouter une action',
+        'add_new_item' => 'Ajouter une action',
+        'edit_item' => "Editer une action",
+        'new_item' => 'Nouveau action',
+        'view_item' => "Voir une action",
+        'search_items' => 'Chercher une action',
         'not_found' => 'Pas de résultats',
         'not_found_in_trash' => 'Pas de résultats',
-        'parent_item_colon' => 'Membre parent:',
-        'menu_name' => 'Membre',
+        'parent_item_colon' => 'Action parente:',
+        'menu_name' => 'Action',
     );
 
     $args = array(
@@ -30,7 +35,7 @@ function ajout_custom_type_membre()
         'show_ui' => true,
         'show_in_menu' => true,
         'menu_position' => 5,
-        'menu_icon' => 'dashicons-admin-users',
+        'menu_icon' => 'dashicons-megaphone',
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,

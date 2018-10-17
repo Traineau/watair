@@ -1,25 +1,25 @@
 <?php
 
-add_action( 'init', 'ajout_custom_type_membre' );
+add_action( 'init', 'ajout_custom_type_evenement' );
 
-function ajout_custom_type_membre()
+function ajout_custom_type_evenement()
 {
 
-    $post_type = "membre";
+    $post_type = "evenement";
     $labels = array(
-        'name' => 'Membres',
-        'singular_name' => 'Membres',
-        'all_items' => 'Tous les membres',
-        'add_new' => 'Ajouter un membre',
-        'add_new_item' => 'Ajouter un membre',
-        'edit_item' => "Editer un membre",
-        'new_item' => 'Nouveau membre',
-        'view_item' => "Voir un membre",
-        'search_items' => 'Chercher un membre',
+        'name' => 'Evenement',
+        'singular_name' => 'Evenement',
+        'all_items' => 'Tous les evenements',
+        'add_new' => 'Ajouter un evenement',
+        'add_new_item' => 'Ajouter un evenement',
+        'edit_item' => "Editer un evenement",
+        'new_item' => 'Nouveau evenement',
+        'view_item' => "Voir un evenement",
+        'search_items' => 'Chercher un evenement',
         'not_found' => 'Pas de résultats',
         'not_found_in_trash' => 'Pas de résultats',
-        'parent_item_colon' => 'Membre parent:',
-        'menu_name' => 'Membre',
+        'parent_item_colon' => 'Evenement parent:',
+        'menu_name' => 'Evenement',
     );
 
     $args = array(
@@ -30,7 +30,7 @@ function ajout_custom_type_membre()
         'show_ui' => true,
         'show_in_menu' => true,
         'menu_position' => 5,
-        'menu_icon' => 'dashicons-admin-users',
+        'menu_icon' => 'dashicons-megaphone',
         'show_in_nav_menus' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => false,
