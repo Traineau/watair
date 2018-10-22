@@ -11,7 +11,7 @@ get_header(); //appel du template header.php
         while (have_posts()){
             the_post();
             ?>
-            <h1><?php the_title(); ?></h1>
+            <h1><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h1>
             <h2>Posté le <?php the_time('F jS, Y') ?></h2>
             <p><?php the_content(); ?></p>
             <?php
